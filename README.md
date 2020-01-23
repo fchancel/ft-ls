@@ -47,6 +47,7 @@ Basic functions:
 
 `-1` Force la sortie à une entré par ligne
 
+## Démonstration
 
 ![Démonstration ft_ls](https://gitlab.com/fchancel/ft_ls/raw/master/img/ft_ls1.gif)
 
