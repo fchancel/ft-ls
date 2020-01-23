@@ -31,12 +31,12 @@ SRC_NAME 	=	main.c						\
 				launcher_display_detail.c	\
 				struct_for_col.c
 
-OBJ_PATH	= 	obj
+OBJ_PATH	= 	objs
 CPPFLAGS	=	-I include
 LDFLAG		= 	-L libft
 LDLIBS		=	-lft
 CC 			=	clang
-CFLAGS 		=	-Werror -Wall -Wextra
+CFLAGS 		=	-Werror -Wall -Wextra -g
 
 OBJ_NAME 	= 	$(SRC_NAME:.c=.o)
 
@@ -46,22 +46,22 @@ OBJ 		=	$(addprefix $(OBJ_PATH)/,$(OBJ_NAME))
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@make -C libft
-	@$(CC) $(LDFLAG) $(LDLIBS) $^ -o $@
-	@echo "Compilation Ft_ls .... OK"
+		@make -C libft
+		@$(CC) $(LDFLAG) $^ $(LDLIBS)  -o $@
+		@echo "Compilation ft_ls .... OK"
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
-	@mkdir $(OBJ_PATH) 2> /dev/null || true
-	@$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ -c $<
+		@mkdir $(OBJ_PATH) 2> /dev/null || true
+		@$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ -c $<
 
 clean:
-	@make -C libft clean
-	@rm -fv $(OBJ)
-	@rmdir $(OBJ_PATH) 2> /dev/null || true
-	@echo "Clean Ft_ls .......... OK"
+		@make -C libft clean
+		@rm -fv $(OBJ)
+		@rmdir $(OBJ_PATH) 2> /dev/null || true
+		@echo "Clean ft_ls .......... OK"
 
 fclean: clean
-	@rm -f libft/libft.a
-	@rm -fv $(NAME)
-	@echo "Fclean Ft_ls .......... OK"
+		@rm -f libft/libft.a
+		@rm -fv $(NAME)
+		@echo "Fclean ft_ls .......... OK"
 re: fclean all

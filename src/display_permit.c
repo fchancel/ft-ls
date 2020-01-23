@@ -59,17 +59,18 @@ char		get_type(mode_t st_mode)
 
 char		get_acl(char *path)
 {
-	char	buf[100];
-	acl_t	acl;
+//	char	buf[100];
+//	acl_t	acl;
 	char	ret;
 
 	ret = ' ';
-	if ((acl = acl_get_file(path, ACL_TYPE_EXTENDED)))
-	{
-		acl_free((void*)acl);
-		ret = '+';
-	}
-	if (listxattr(path, buf, sizeof(buf), XATTR_NOFOLLOW) > 0)
-		ret = '@';
+	*path = ' ';
+//	if ((acl = acl_get_file(path, ACL_TYPE_EXTENDED)))
+//	{
+//		acl_free((void*)acl);
+//		ret = '+';
+//	}
+//	if (listxattr(path, buf, sizeof(buf), XATTR_NOFOLLOW) > 0)
+//		ret = '@';
 	return (ret);
 }
