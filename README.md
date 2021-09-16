@@ -49,6 +49,6 @@ Basic functions:
 
 ## Démonstration
 
-![Démonstration ft_ls](https://gitlab.com/fchancel/ft_ls/raw/master/img/ft_ls1.gif)
+![Démonstration ft_ls](https://raw.githubusercontent.com/fchancel/ft-ls/master/img/ft_ls1.gif)
 
-![Démonstration ft_ls](https://gitlab.com/fchancel/ft_ls/raw/master/img/ft_ls2.gif)
+![Démonstration ft_ls](https://raw.githubusercontent.com/fchancel/ft-ls/master/img/ft_ls2.gif)
